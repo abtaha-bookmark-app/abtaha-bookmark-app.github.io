@@ -57,7 +57,7 @@
     padding: 2rem 3rem;
 }
 
-.inputContent > h3{
+.inputContent > h4{
     color: rgb(30, 125, 207);
 }
 
@@ -146,12 +146,11 @@
 	bottom: 20px;
 	right: 20px;
 
-	padding: 7px 18px 10px 18px;
-	font-size: 20px;
+	padding: 5px 16px 10px 16px;
+	font-size: 25px;
 
 	color: white;
 	background-color: rgb(30, 125, 207);
-	font-size: 1.5rem;
 
 	text-decoration: none;
 	outline: none;

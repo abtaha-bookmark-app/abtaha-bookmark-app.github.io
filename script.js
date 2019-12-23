@@ -43,8 +43,7 @@ function addToDocument() {
 }
 
 const addBookmark = () => {
-	modal.style.display = "block";
-}
+	modal.style.display = "block";}
 
 span.onclick = () => {
 	modal.style.display = "none";
