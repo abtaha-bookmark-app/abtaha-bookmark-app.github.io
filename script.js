@@ -36,7 +36,7 @@ function deleteBookmark(el) {
 function addBookmark() {
 	modal.style.display = "none";
 
-	let url = isValidUrl(linkInput.value);
+	let url = isValidUrl("https://" + linkInput.value);
 	let name = nameInput.value === "" ? url : nameInput.value;
 
 	if (url) {
