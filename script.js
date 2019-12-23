@@ -42,16 +42,16 @@ function addToDocument() {
 	}
 }
 
-function addBookmark() {
+const addBookmark = () => {
 	modal.style.display = "block";
 }
 
-span.onclick = function() {
+span.onclick = () => {
 	modal.style.display = "none";
 };
 
-window.onclick = function(event) {
+window.onclick = event => {
 	if (event.target == modal) {
-		addToDocument();
+		modal.style.display = "none";
 	}
 };
