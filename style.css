@@ -53,7 +53,7 @@
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     background-color: white;
 
-    margin: 40vh 10% 40vh 10%;
+    margin: 26vh 10% 0vh 10%;
     padding: 2rem 3rem;
 }
 
@@ -98,6 +98,43 @@
 	cursor: pointer;
 }
 
+
+.saveBtn.active.focus,
+.saveBtn.active:focus,
+.saveBtn.focus,
+.saveBtn:active.focus,
+.saveBtn:active:focus,
+.saveBtn:focus,
+.saveBtn {
+	padding: 7px 18px 10px 18px;
+	margin-top: 3rem;
+	font-size: 20px;
+
+	color: white;
+	background-color: rgb(30, 125, 207);
+	font-size: 1.5rem;
+
+	text-decoration: none;
+	outline: none;
+	box-shadow: none;
+
+	border-style: outset;
+	border: 2px solid rgb(30, 125, 207);
+	border-radius: 10px;
+
+	width: 100%;
+
+	transition: 0.3s;
+}
+
+.saveBtn:hover {
+	background-color: white;
+	color: rgb(30, 125, 207);
+	border: 2px solid rgb(30, 125, 207);
+}
+
+
+
 .addBtn.active.focus,
 .addBtn.active:focus,
 .addBtn.focus,
@@ -105,12 +142,12 @@
 .addBtn:active:focus,
 .addBtn:focus,
 .addBtn {
-	position: absolute;
+	position: fixed;
 	bottom: 20px;
 	right: 20px;
 
-	padding: 0.5rem 1.25rem 0.9rem 1.25rem;
-	font-size: 2rem;
+	padding: 7px 18px 10px 18px;
+	font-size: 20px;
 
 	color: white;
 	background-color: rgb(30, 125, 207);
