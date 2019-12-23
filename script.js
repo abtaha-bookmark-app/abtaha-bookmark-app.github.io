@@ -20,6 +20,7 @@ const isValidURL = string => {
     return res;
   } else {
     alert("Invalid URL");
+    modal.style.display = "block";
     return false;
   }
 };
