@@ -15,7 +15,13 @@ if (localStorage.getItem("bookmarkApp") === "") {
 
 const isValidURL = string => {
   var res = string.match(/(http(s)?:\/\/.)?(www\.)?[-a-zA-Z0-9@:%._\+~#=]{2,256}\.[a-z]{2,6}\b([-a-zA-Z0-9@:%_\+.~#?&//=]*)/g);
-  return (res !== null)
+  
+  if (res != null){
+    return res;
+  } else {
+    alert("Invalid URL");
+    return false;
+  }
 };
 
 function deleteBookmark(el) {
@@ -29,7 +35,7 @@ function deleteBookmark(el) {
 function addBookmark() {
 	modal.style.display = "none";
 
-	let url = isValidUrl("https://" + linkInput.value);
+	let url = isValidUrl(linkInput.value);
 	let name = nameInput.value === "" ? url : nameInput.value;
 
 	if (url) {
