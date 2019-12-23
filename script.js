@@ -24,7 +24,15 @@ const isValidUrl = str => {
 	}
 };
 
-function addToDocument() {
+function deleteBookmark(el) {
+	el.parentElement.remove()
+	localStorage.setItem(
+		"bookmarkApp",
+		document.getElementById("lists").innerHTML
+	);
+}
+
+function addBookmark() {
 	modal.style.display = "none";
 
 	let url = isValidUrl("https://" + linkInput.value);
@@ -33,7 +41,7 @@ function addToDocument() {
 	if (url) {
 		document.getElementById(
 			"lists"
-		).innerHTML += `<a href=${url} target="_blank">${name}</a>`;
+		).innerHTML += `<div><a href=${url} target="_blank">${name}</a><span onclick="deleteBookmark(this)" class="close">&times;</span></div>`;
 
 		localStorage.setItem(
 			"bookmarkApp",
@@ -42,8 +50,9 @@ function addToDocument() {
 	}
 }
 
-const addBookmark = () => {
-	modal.style.display = "block";}
+const openModal = () => {
+	modal.style.display = "block";
+};
 
 span.onclick = () => {
 	modal.style.display = "none";
